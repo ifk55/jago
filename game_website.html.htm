@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jago's Game Shack</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #121212;
+            color: #fff;
+        }
+        header {
+            background: #1e1e1e;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #ff9800;
+        }
+        .hero {
+            text-align: center;
+            padding: 5rem 2rem;
+            background: url('hero-background.jpg') no-repeat center center/cover;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background: #ff9800;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #e68900;
+        }
+        .search {
+            text-align: center;
+            padding: 2rem;
+        }
+        #search-bar {
+            padding: 0.75rem;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 5px;
+            border: none;
+        }
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1rem;
+            padding: 2rem;
+        }
+        .game {
+            background: #232323;
+            padding: 1.5rem;
+            border-radius: 5px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+        .game:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #ff9800;
+            border-color: #ff9800;
+        }
+        .game img {
+            width: 110%;
+            border-radius: 5px;
+        }
+        .game h3 {
+            margin-top: 10px;
+            transition: text-shadow 0.3s ease-in-out;
+        }
+        .game h3:hover {
+            text-shadow: 0 0 10px #ff9800;
+        }
+        .cta {
+            text-align: center;
+            padding: 3rem;
+            background: #232323;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #1e1e1e;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Jago's Game Shack</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#games">Games</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+    
+    <section class="hero">
+        <h1>Discover & Play Amazing Games</h1>
+        <p>Explore our massive collection of free online games.</p>
+        <a href="#games" class="btn">Browse Games</a>
+    </section>
+    
+    <section class="search">
+        <input type="text" id="search-bar" placeholder="Search for a game...">
+    </section>
+    
+    <section class="games-grid" id="games">
+        <div class="game" onclick="window.open('https://godkudocs.github.io/subway-surfers/src/sub', '_blank')" style="background: url('https://th.bing.com/th?id=OIP.NRzPYJFG_ZD91N4wzmQGiwHaJ4&w=216&h=288&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2') no-repeat center center/cover;" >
+            <img src="subway-surfers.jpg" alt="Subway Surfers">
+            <h3>Subway Surfers</h3>
+        </div>
+        <div class="game" onclick="window.open('https://www.bing.com/ck/a?!&&p=ac7dbf38fa6696a26551e99205f3c46ced3b9918727e9f95d2f22438549ac82fJmltdHM9MTczODk3MjgwMA&ptn=3&ver=2&hsh=4&fclid=20a2070e-bda3-6448-280b-1278bc7565bf&psq=temple+run+2+github&u=a1aHR0cHM6Ly9naXRodWJzaHJ1Yi5naXRodWIuaW8vaHRtbDUtZ2FtZXMvZ2FtZXMvdGVtcGxlcnVuMi8&ntb=1', '_blank')" style="background: url('https://th.bing.com/th/id/OIP.kpQFrwHUuEprAt-9Najw9gHaHa?w=184&h=184&c=7&r=0&o=5&pid=1.7') no-repeat center center/cover;" >
+            <img src="game2.jpg" alt="Temple Run 2">
+            <h3>Temple Run 2</h3>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Jago's Game Shack. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
